@@ -1,5 +1,5 @@
 import "./App.css";
-import { Formik, Form, useField } from "formik";
+import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { TextField } from "./components/TextField";
 
@@ -7,7 +7,7 @@ function App() {
   const validate = Yup.object({
     name: Yup.string()
       .max(15, "Must be 15 characters or less")
-      .required("Required"),
+      .required("Preencha esse campo"),
     email: Yup.string().email("Email inválido").required("Preencha esse campo"),
     celular: Yup.string().required("Preencha esse campo"),
     empresa: Yup.string().required("Preencha esse campo"),
