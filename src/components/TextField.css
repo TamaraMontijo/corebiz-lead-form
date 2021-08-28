@@ -1,0 +1,11 @@
+input {
+  background-color: inherit;
+  width: 100%;
+  font-size: 1.8rem;
+  color: #000;
+  font-family: Circular Std Bold, sans-serif;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  padding: 2rem 0 1.8rem;
+  transition: opacity 0.3s ease-in-out;
+}

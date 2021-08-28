@@ -1,4 +1,11 @@
-body {
+@font-face {
+  font-family: "CircularStdMedium";
+  src: local("CircularStdMedium"),
+    url("./fonts/CircularStd-Medium.ttf") format("truetype");
+  font-weight: bold;
+}
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +17,178 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+body {
+  font-family: "CircularStdMedium", sans-serif;
+}
+
+.inputTextField:focus,
+.textarea:focus {
+  outline: none;
+  color: #000;
+}
+.contact-area {
+  padding: 6rem 0;
+  background-color: #f5f5f5;
+  padding-bottom: 12.5rem;
+}
+
+.contact-area__form {
+  margin-top: 0;
+  padding-right: 7%;
+}
+
+.contact-area__form .form-name {
+  grid-area: name;
+}
+
+.contact-area__form .form-email {
+  grid-area: email;
+}
+
+.contact-area__form .form-celular {
+  grid-area: celular;
+}
+
+.contact-area__form .form-mensagem {
+  grid-area: mensagem;
+}
+
+.contact-area__form .form-empresa {
+  grid-area: empresa;
+}
+
+.contact-area__form .form-locale {
+  grid-area: locale;
+}
+
+.contact-area__form select {
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.contact-area__form select {
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.contact-area__form form {
+  /* display: -ms-grid; */
+  display: grid;
+  grid-column-gap: 2.9rem;
+  /* -ms-grid-columns: 29% 16% 31% 1fr; */
+  grid-template-columns: 29% 16% 31% 1fr;
+  grid-template-areas:
+    "name name email email"
+    "celular mensagem mensagem submit"
+    "empresa mensagem mensagem submit"
+    "locale mensagem mensagem submit";
+}
+
+.contact-area__form input,
+.contact-area__form .inputTextField,
+.contact-area__form select,
+.contact-area__form textarea {
+  background-color: inherit;
+  justify-self: stretch;
+  width: 100%;
+  font-size: 1.8rem;
+  color: #000;
+  font-family: "CircularStdMedium", sans-serif;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  padding: 2rem 0 1.8rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contact-area__form input,
+.contact-area__form .inputTextField,
+.contact-area__form select,
+.contact-area__form textarea {
+  background-color: inherit;
+  width: 100%;
+  font-size: 1.8rem;
+  color: #000;
+  font-family: "CircularStdMedium", sans-serif;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  padding: 2rem 0 1.8rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contact-area__form select.selected,
+.contact-area__form select:focus {
+  color: #000;
+}
+
+.contact-area__form .form-submit {
+  grid-area: submit;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+.contact-area__form .cta-submit {
+  cursor: pointer;
+  display: block;
+  margin-top: 2rem;
+  padding-right: 5.3rem;
+  background-color: inherit;
+  color: #000;
+  font-family: "CircularStdMedium", sans-serif;
+  font-size: 1.8rem;
+  position: relative;
+  margin-left: auto;
+  border: none;
+  opacity: 0.15;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contact-area__form .cta-submit:hover {
+  opacity: 1;
+}
+.contact-area__form .cta-submit:after {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  bottom: 0;
+  border-radius: 50%;
+  right: 0;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMS4zMTQiIGhlaWdodD0iMTEuMzEzIj48cGF0aCBkYXRhLW5hbWU9IlVuacOjbyAxMSIgZD0iTTUuNjU3IDBsNS42NTcgNS42NTctNS42NTcgNS42NTdMNC4yNDMgOS45bDQuMjQzLTQuMjQzLTQuMjQzLTQuMjQzeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.contact-area .checkbox-agree {
+  display: flex;
+  justify-content: flex-start;
+  margin: 2rem 0 0;
+}
+
+.contact-area .checkbox-agree input,
+.contact-area .checkbox-agree .inputTextField {
+  position: absolute;
+  max-width: 2%;
+}
+
+.contact-area .checkbox-agree p {
+  width: 75%;
+  text-align: left;
+}
+
+.contact-area .checkbox-agree p {
+  margin: 0 0 0 3rem;
+}
+
+.contact-form-success-msg {
+  background: #00d084;
+  width: 100%;
+  height: auto;
+  margin: 25px 0 0;
+  text-align: center;
+  border-radius: 5px;
+  transition: all 0.2s;
 }
